@@ -1,7 +1,8 @@
 'use client'
 
 import { useState } from 'react'
-import { ArrowLeft, ArrowRight, Battery, Check, ChevronDown, CircleGauge, ExternalLink, Leaf, Zap } from 'lucide-react'
+import { ArrowLeft, ArrowRight, Battery, Check, CircleGauge, ExternalLink, Leaf, Zap } from 'lucide-react'
+import { SiteFooter, SiteHeader } from '@/components/site-chrome'
 
 const provinces = ['Ontario', 'Alberta', 'British Columbia', 'Quebec', 'Manitoba', 'Nova Scotia']
 
@@ -11,7 +12,7 @@ export default function VehiclePage() {
   const driveAway = Math.round(37966 * (1 + taxRates[province]) - 5000)
 
   return <main className="catalogue-page">
-    <CatalogHeader />
+    <SiteHeader />
     <div className="catalogue-container">
       <nav className="breadcrumb"><a href="/">Home</a><span>/</span><a href="/">Vehicles</a><span>/</span><span>Nissan LEAF</span></nav>
       <section className="vehicle-hero-detail">
@@ -36,7 +37,7 @@ export default function VehiclePage() {
       </section>
       <section className="info-section" id="rebate"><div><p className="eyebrow">Rebate status</p><h2>Federal EVAP rebate: <em>eligible.</em></h2><p>Because the LEAF S is priced below the federal cap and meets the program requirements, it qualifies for the full $5,000 incentive. Always confirm current eligibility before signing.</p></div><div className="info-stat"><span>EVAP incentive</span><strong>$5,000</strong><small>Applied after tax at purchase</small></div></section>
     </div>
-    <CatalogFooter />
+    <SiteFooter />
   </main>
 }
 
